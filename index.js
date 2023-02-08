@@ -9,5 +9,6 @@ function copyData() {
 
 function updateArray() {
     array.push({i});
+    localStorage.setItem("array", array);
     i++;
 }
