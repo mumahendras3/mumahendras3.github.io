@@ -85,7 +85,7 @@ function showCatalogue(products) {
                 <p class="productName">${products[i].name}</p>
                 <p class="productPrice">${cardPrice}</p>
                 <p class="productCategory">${products[i].category}</p>
-                <button onclick='addtoCart(${products[i].id})'>tambah ke keranjang</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary tombol-keranjang" onclick='addtoCart(${products[i].id})'>Tambah ke keranjang</button>
             </div>
         </div>`
     }

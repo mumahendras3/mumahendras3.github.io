@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>GUN & BOMB</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- <title>Document</title> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <ul class="container-list">
-                <li class="header-logo"><a href="#top">OLX</li>
+                
+                <li class="header-list header-logo">
+                    <img src="gunShop.png">
+                </li>
+                   
                 <li class="header-list">
                     <a onclick="showAll()">All</a>
                 </li>
@@ -35,11 +41,11 @@
     </header>
     <main>
         <div id="siteProfile">
-            <h1>AGNI<span>.</span>SUPREME</h1>
+            <h1>GUN<span class="text-dan">&</span><span class="text-bomb">BOMB</span></h1>
         </div>
         <div>
-            <a id="showAll" onclick="showAll()">Back to all</a>
-            <p id="emptyContainer">Barang yang Anda cari tidak ditemukan</p> 
+            <a id="showAll" class="btn btn-sm btn-outline-secondary back-all" onclick="showAll()">Back to all</a>
+            <p id="emptyContainer">Barang yang Anda cari tidak ditemukan</p>
         </div>
         <div id="productContainer">
             <!-- `<div class="productCard">

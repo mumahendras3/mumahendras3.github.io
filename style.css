@@ -7,6 +7,36 @@ html {
     scroll-behavior: smooth;
 }
 
+.tombol-keranjang {
+    
+
+    top:30%;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:10px;
+    min-height:30px; 
+    min-width: 20px;
+    
+}
+
+.back-all{
+
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:10px;
+    min-height:30px; 
+    min-width: 20px;
+    position: relative;
+    top: 20px;
+
+
+}
+
+
 body {
     font-family : "Lucida Grande";
     width : 100%;
@@ -23,7 +53,7 @@ header {
 }
 
 .header-list a {
-    color : white;
+    color :	#FFFAF0;
     text-decoration: none;
 }
 
@@ -47,16 +77,11 @@ header {
 }
 
 .header-logo {
-    float : left;
-    color : white;
-    letter-spacing: 3px;
-    padding : 20px;
-    font-size : 26px;
+    padding : 10px;
 }
 
-.header-logo a {
-    color : white;
-    text-decoration: none;
+.header-logo img {
+   height: 60px;
 }
 
 #searchBar {
@@ -83,21 +108,36 @@ header {
     cursor: pointer;
 }
 
+
 #siteProfile {
-    height : 400px;
-    background: red;
+    height : 100vh;
+    background:#2F4F4F;
+    background-image: url("amunisi.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #siteProfile h1 {
-    padding-top: 200px;
-    color : black;
-    font-size: 60px;
-    text-align: center;
+    color : goldenrod;
+    font-size: 80px;
+    text-align:center;
 }
 
-#siteProfile span {
-    color : blue;
+.text-bomb{
+
+  color: red;
+
 }
+
+.text-dan{
+
+    color: azure;
+}
+
+/* #siteProfile span {
+    color :blue;
+} */
 
 #showAll {
     text-decoration: underline;
@@ -106,7 +146,7 @@ header {
 }
 
 #showAll:hover {
-    color : lightblue;
+    color :lightblue;
     cursor: pointer;
 }
 
@@ -232,10 +272,19 @@ header {
 
 #cart {
     position : fixed;
-
 }
 
-
+.productName{
+    /* background-color: #A9A9A9; */
+     /* color: black; */
+     color: black;
+     text-align: left;
+    margin: 10px;
+    padding: 5px; 
+    width: 100px; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
 
 #buy:hover {
     background: rgba(95, 80, 232, 1);
@@ -250,4 +299,32 @@ header {
 #modalMessage {
     color: blue;
     font-size: 45px;
+}
+
+.productPrice{
+
+    
+    color:black;
+    text-align: left;
+   margin: 10px;
+   padding: 5px; 
+   width: 80px; 
+   font-family: Cambria;
+   font-size: medium;
+   
+
+}
+
+.productCategory{
+
+
+    color: black;
+    text-align: left;
+   margin: 10px;
+   padding: 5px; 
+   width: 100px; 
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: small;
+
+
 }
