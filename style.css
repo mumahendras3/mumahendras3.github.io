@@ -4,6 +4,7 @@
 * {
     margin:0;
     padding:0;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -30,7 +31,7 @@ html {
     transition: 0.3s;
 }
 
-.back-all{
+.back-all {
 
     background-color:#0a0a23;
     color: #fff;
@@ -40,11 +41,18 @@ html {
     min-height:30px; 
     min-width: 20px;
     position: relative;
-    top: 20px;
-
-
+    top: 30px;
+    width: max-content;
+    line-height: 2rem;
+    font-family: "Trebuchet MS";
+    text-decoration: none;
 }
 
+.back-all:hover {
+    background-color: #4b4b4b;
+    transition: 0.3s;
+    color: #fff;
+}
 
 body {
     font-family : "Lucida Grande";
@@ -119,8 +127,9 @@ header {
 }
 
 #checkout:hover {
-    /* text-decoration: underline; */
     cursor: pointer;
+    background-color: #4b4b4b;
+    transition: 0.3s;
 }
 
 .feather-shopping-cart {
@@ -156,18 +165,16 @@ header {
     color: azure;
 }
 
-/* #siteProfile span {
-    color :blue;
-} */
+#product-container-header {
+    height: 50px;
+}
 
 #showAll {
-    text-decoration: underline;
     margin-left: 60px;
     display: none;
 }
 
 #showAll:hover {
-    color :lightblue;
     cursor: pointer;
 }
 
@@ -186,7 +193,7 @@ header {
 }
 
 .productContainer {
-    margin : 0px 60px;
+    margin : 0px 60px 8rem;
     display: flex;
     justify-content: space-evenly;
 }
@@ -212,6 +219,7 @@ header {
 #emptyContainer {
     font-size: 25px;
     margin-top: 50px;
+    margin-bottom: 8rem;
     text-align: center;
     display: none;
 }

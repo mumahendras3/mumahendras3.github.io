@@ -75,6 +75,7 @@ function showCatalogue(products) {
     }
     productContainer.style.display = `flex`;
     productContainer.style.flexWrap = `wrap`;
+    productContainer.style.marginBottom = `8rem`;
     productContainer.innerHTML = "";
     for (let i = 0; i < products.length; i++) {
         cardPrice = formatNumber(products[i].price);
@@ -222,6 +223,8 @@ function searchProduct() {
     if (searchedProducts.length > 0) {
         document.getElementById("emptyContainer").style.display = `none`;
     }
+    // Scroll the view to the #product-container-header element to show the search result
+    document.getElementById("product-container-header").scrollIntoView();
 }
 
 // Formatting harga ke Rp
