@@ -45,8 +45,7 @@
 
     <div id="modal">
         <div id="modalContent">
-            <p>Keranjang Anda</p>
-            <span id="closeModalIcon">&times;</span>
+            <p>Keranjang Anda<span id="closeModalIcon">&times;</span></p>
             <table id="checkoutTable">
                 <!-- <tr>
                     <th>No</th>
@@ -81,7 +80,8 @@
                     <td class="rowDelete" onclick="removeItem(document.getElementsByClassName(`rowNumber`)[1].innerText)">x</td>
                 </tr> -->
             </table>
-            <p id="modalMessage"></p>
+            
+            <p id="buy" onclick="buyProduct()">Checkout</p>
         </div>
     </div>
 
