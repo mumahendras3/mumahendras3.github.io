@@ -62,7 +62,7 @@ body {
 header {
     height : 70px;
     width : 100%;
-    background-color:rgba(0, 0, 0, 0.9);
+    background-color:rgba(0, 0, 0, 1);
     margin : 0 auto;
     position : fixed;
     top : 0;
@@ -143,6 +143,10 @@ header {
     cursor: pointer;
     background-color: #4b4b4b;
     transition: 0.3s;
+}
+
+#checkout:active {
+    background-color: #6b6b6b;
 }
 
 .feather-shopping-cart {

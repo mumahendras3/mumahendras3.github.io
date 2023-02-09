@@ -21,7 +21,7 @@ let productCatalogue = [
 
 let cart = []; // untuk menampung produk yang udah dibeli
 
-let productCounts = {}; // untuk display count, nama dan price di dalam halaman cart
+let productCounts = {}; // untuk display count, nama dan price di dalam array cart
 
 showAll(); // Untuk nunjukin semua barang
 
@@ -66,6 +66,8 @@ function filterCategory(category) {
     showCatalogue(filteredProducts);
     document.getElementById("showAll").style.display = `block`;
     document.getElementById("emptyContainer").style.display = `none`;
+    // Scroll into product container header 
+    document.getElementById("product-container-header").scrollIntoView();
 }
 
 // Menunjukkan barang di homepage
@@ -219,11 +221,13 @@ function searchProduct() {
         }
     });
     showCatalogue(searchedProducts);
+    // Display Card
     if (searchedProducts.length === productCatalogue.length) {
         document.getElementById("showAll").style.display = `none`;
     } else {
         document.getElementById("showAll").style.display = `block`;
     }
+    // Display empty container
     if (searchedProducts.length > 0) {
         document.getElementById("emptyContainer").style.display = `none`;
     }
