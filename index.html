@@ -16,13 +16,13 @@
                     <a onclick="showAll()">All</a>
                 </li>
                 <li class="header-list">
-                    <a onclick="filterCategory(`pistol`)">Pistol</a>
+                    <a onclick="filterCategory(`Pistol`)">Pistol</a>
                 </li>
                 <li class="header-list">
-                    <a onclick="filterCategory(`assault rifle`)">Assault Rifle</a>
+                    <a onclick="filterCategory(`Assault Rifle`)">Assault Rifle</a>
                 </li>
                 <li class="header-list">
-                    <a onclick="filterCategory(`shotgun`)">Shotgun</a>
+                    <a onclick="filterCategory(`Shotgun`)">Shotgun</a>
                 </li>
                 <li class="header-list">
                     <input id="searchBar" type="text" placeholder="&#x1f50D search weapon..."><span id="searchButton" onclick="searchProduct()">Cari</span>
@@ -39,8 +39,18 @@
         </div>
         <div>
             <a id="showAll" onclick="showAll()">Back to all</a>
+            <p id="emptyContainer">Barang yang Anda cari tidak ditemukan</p> 
         </div>
-        <div id="productContainer"> 
+        <div id="productContainer">
+            <!-- `<div class="productCard">
+                <div class="productProfile">
+                    <img class="productImage" src="${products[i].image}" alt="">
+                    <p class="productName">${products[i].name}</p>
+                    <p class="productPrice">${cardPrice}</p>
+                    <p class="productCategory">${products[i].category}</p>
+                    <button onclick='addtoCart(${products[i].id})'>tambah ke keranjang</button>
+                </div>
+            </div>` -->
         </div>
     </main>
 
@@ -84,8 +94,10 @@
                     <td class="rowDelete" onclick="removeItem(document.getElementsByClassName(`rowNumber`)[1].innerText)">x</td>
                 </tr> -->
             </table>
-            
-            <p id="buy" onclick="buyProduct()">Checkout</p>
+            <div id="cartButtons">
+                <p id="clear" onclick="removeAll()">Clear</p>
+                <p id="buy" onclick="buyProduct()">Checkout</p>
+            </div>
         </div>
     </div>
 

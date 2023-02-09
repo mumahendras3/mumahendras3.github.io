@@ -1,33 +1,25 @@
 // Semua Variabel
 
 let productCatalogue = [
-    { id: 1, name: "AK-47", category: "assault rifle", price: 35000000, image: "./images/ak-47.jpg", stock: "12" },
-    { id: 2, name: "M14", category: "assault rifle", price: 25000000, image: "./images/m14.jpg", stock: "12" },
-    { id: 3, name: "Taurus G3C", category: "pistol", price: 12500000, image: "./images/Taurus_G3c_Pistol.png", stock: "12" },
-    { id: 4, name: "Charles Daly 1911", category: "pistol", price: 18000000, image: "./images/Charles_Daly_1911_Pistol.png", stock: "12" },
-    { id: 5, name: "KS-12", category: "assault rifle", price: 9000000, image: "./images/kalashnikov_KS-12.png", stock: "12" },
-    { id: 6, name: "DPMS Lite 16 A3 Remington", category: "assault rifle", price: 45000000, image: "./images/DPMS_Lite_16_A3_Remington.png", stock: "12" },
-    { id: 7, name: "C5 mine", category: "bomb", price: 2000000, image: "./images/c5.jpg", stock: "12" },
-    { id: 8, name: "Tsar Bomba", category: "bomb", price: 1, image: "./images/tsar_bomba.jpeg", stock: "12" },
-    { id: 9, name: "M1014", category: "shotgun", price: 1000000, image: "./images/M1014.png", stock: "12" },
-    { id: 10, name: "M1873", category: "shotgun", price: 1000000, image: "./images/M1873.png", stock: "12" },
-    { id: 11, name: "SPAS12", category: "shotgun", price: 1000000, image: "./images/SPAS12.png", stock: "12" },
-    { id: 12, name: "SPAS15", category: "shotgun", price: 1000000, image: "./images/SPAS15.png", stock: "12" },
-    { id: 13, name: "FlashBang", category: "bomb", price: 1000000, image: "./images/Flashbang.png", stock: "12" },
-    { id: 14, name: "Flashsmoke", category: "bomb", price: 1000000, image: "./images/Smoke.png", stock: "12" },
-    { id: 15, name: "M1911", category: "pistol", price: 1000000, image: "./images/M1911.png", stock: "12" },
-    { id: 16, name: "Revolver", category: "pistol", price: 1000000, image: "./images/Revolver.png", stock: "12" },
+    { id: 1, name: "AK-47", category: "Assault Rifle", price: 35000000, image: "./images/ak-47.jpg", stock: "12" },
+    { id: 2, name: "M14", category: "Assault Rifle", price: 25000000, image: "./images/m14.jpg", stock: "12" },
+    { id: 3, name: "Taurus G3C", category: "Pistol", price: 12500000, image: "./images/Taurus_G3c_Pistol.png", stock: "12" },
+    { id: 4, name: "Charles Daly 1911", category: "Pistol", price: 18000000, image: "./images/Charles_Daly_1911_Pistol.png", stock: "12" },
+    { id: 5, name: "KS-12", category: "Assault Rifle", price: 9000000, image: "./images/kalashnikov_KS-12.png", stock: "12" },
+    { id: 6, name: "DPMS Lite 16 A3 Remington", category: "Assault Rifle", price: 45000000, image: "./images/DPMS_Lite_16_A3_Remington.png", stock: "12" },
+    { id: 7, name: "C5 mine", category: "Bombs", price: 2000000, image: "./images/c5.jpg", stock: "12" },
+    { id: 8, name: "Tsar Bomba", category: "Bombs", price: 1, image: "./images/tsar_bomba.jpeg", stock: "12" },
 ];
 
-let cart = [];
+let cart = []; // untuk menampung produk yang udah dibeli
 
-let productCounts = {};
+let productCounts = {}; // untuk display count, nama dan price di dalam halaman cart
 
 showAll(); // Untuk nunjukin semua barang
 
-let searchBar = document.getElementById("searchBar");
+let searchBar = document.getElementById("searchBar"); // Untuk fungsi search
 
-let searchInput = document.getElementById("searchBar").value.toLowerCase();
+let searchInput = document.getElementById("searchBar").value.toLowerCase(); // untuk fungsi search
 
 
 // Fungsi-Fungsi
@@ -35,14 +27,17 @@ let searchInput = document.getElementById("searchBar").value.toLowerCase();
 // Menunjukkan semua barang di katalog
 function showAll() {
     showCatalogue(productCatalogue);
+    document.getElementById("emptyContainer").style.display = `none`;
+    document.getElementById("showAll").style.display = `none`;
 }
 
 // Menambahkan barang ke keranjang
 function addtoCart(id) {
-    let product = productCatalogue.filter((el) => el.id === id);
+    let product = productCatalogue.filter((el) => el.id === id);    // Filter barang berdasarkan id, hasil adalah barang
+                                                                    // dengan id yang sama dengan parameter 
     cart.push(product[0]);
     productName = cart[cart.length - 1].name;
-    if (!productCounts[productName]) {
+    if (!productCounts[productName]) {                              // Mindahin dari cart ke productCounts
         productCounts[productName] = {
             quantity: 1,
             price: product[0].price
@@ -61,10 +56,15 @@ function addtoCart(id) {
 function filterCategory(category) {
     let filteredProducts = productCatalogue.filter(el => el.category === category);
     showCatalogue(filteredProducts);
+    document.getElementById("showAll").style.display = `block`;
+    document.getElementById("emptyContainer").style.display = `none`;
 }
 
 // Menunjukkan barang di homepage
 function showCatalogue(products) {
+    if (products.length === 0) {
+        document.getElementById("emptyContainer").style.display = 'block';
+    }
     productContainer.style.display = `flex`;
     productContainer.style.flexWrap = `wrap`;
     productContainer.innerHTML = "";
@@ -166,6 +166,14 @@ function removeItem(rowName) {
     showItems();
 }
 
+// tombol Clear
+function removeAll() {
+    cart = [];
+    productCounts = {};
+    document.getElementById("count").style.display = 'none';
+    showItems();
+}
+
 // tombol Checkout
 function buyProduct() {
     document.getElementById("checkoutTable").style.display = 'none';
@@ -192,6 +200,14 @@ function searchProduct() {
         }
     });
     showCatalogue(searchedProducts);
+    if (searchedProducts.length === productCatalogue.length) {
+        document.getElementById("showAll").style.display = `none`;
+    } else {
+        document.getElementById("showAll").style.display = `block`;
+    }
+    if (searchedProducts.length > 0) {
+        document.getElementById("emptyContainer").style.display = `none`;
+    }
 }
 
 // Formatting harga ke Rp
