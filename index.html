@@ -24,7 +24,10 @@
                 <li class="header-list">
                     <a onclick="filterCategory(`shotgun`)">Shotgun</a>
                 </li>
-                <li id="checkout" onclick="">
+                <li class="header-list">
+                    <input id="searchBar" type="text" placeholder="&#x1f50D search weapon..."><span id="searchButton" onclick="searchProduct()">Cari</span>
+                </li>
+                <li id="checkout" onclick="openModal()">
                     <a href = "#" id = "shopping-cart"><i data-feather="shopping-cart"></i></a><span id="count">0</span>
                 </li>
             </ul>
@@ -45,7 +48,8 @@
 
     <div id="modal">
         <div id="modalContent">
-            <p>Keranjang Anda<span id="closeModalIcon">&times;</span></p>
+            <p id="modalTitle">Keranjang Anda<span id="closeModalIcon" onclick="closeModal()">&times;</span></p>
+            <p id="modalMessage"></p>
             <table id="checkoutTable">
                 <!-- <tr>
                     <th>No</th>

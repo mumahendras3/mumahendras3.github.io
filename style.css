@@ -59,6 +59,16 @@ header {
     text-decoration: none;
 }
 
+#searchBar {
+    padding : 5px;
+    margin-top: -7px;
+    border-radius: 5px;
+}
+
+#searchButton {
+    display: none;
+}
+
 #checkout {
     float : right;
     display : block;
@@ -198,4 +208,9 @@ header {
 #buy:hover {
     background: rgba(95, 80, 232, 1);
     cursor: pointer;
+}
+
+#modalMessage {
+    color: blue;
+    font-size: 45px;
 }
