@@ -108,8 +108,6 @@ function closeModal() {
 function addSubstract(num, index) {
     let cartName = Object.keys(productCounts);
     let cartList = Object.values(productCounts);
-    console.log(cartList);
-    console.log(cartName);
     let quantity = cartList[index-1].quantity;
     let price = cartList[index-1].price;
     if (quantity == 1 && num == -1) {
@@ -121,6 +119,13 @@ function addSubstract(num, index) {
         document.getElementsByClassName("quantity")[index - 1].innerText = quantity;
         document.getElementsByClassName("rowSubtotal")[index - 1].innerText = subTotal;
     }
+    let totalCheckout = 0;
+    cartList = Object.values(productCounts);
+    for (let i = 0; i < cartName.length;i++) {
+        totalCheckout += cartList[i].quantity * cartList[i].price;
+    }
+    let tableLength = document.getElementsByClassName("rowSubtotal").length;
+    document.getElementsByClassName("rowSubtotal")[tableLength-1].innerText = formatNumber(totalCheckout);
 }
 
 // Nunjukin Barang di Cart
@@ -140,7 +145,7 @@ function showItems() {
     for (let i = 0; i < itemsLength; i++) {
         productPrice = formatNumber(Object.values(productCounts)[i].price);
         productSubtotal = formatNumber(Object.values(productCounts)[i].price * Object.values(productCounts)[i].quantity);
-        sumCheckout += Object.values(productCounts)[i].price;
+        sumCheckout += Object.values(productCounts)[i].price * Object.values(productCounts)[i].quantity;
         checkoutTable.innerHTML += 
         `<tr>
             <td class="rowNumber">${i+1}</td>
@@ -186,6 +191,7 @@ function removeAll() {
 function buyProduct() {
     document.getElementById("checkoutTable").style.display = 'none';
     document.getElementById("buy").style.display = 'none';
+    document.getElementById("clear").style.display = 'none';
     document.getElementById("modalTitle").innerHTML = '<span id="closeModalIcon" onclick="closeModal()">&times;</span></p>';
     document.getElementById("modalMessage").innerText = 'Terima kasih sudah belanja di sini!';
 }

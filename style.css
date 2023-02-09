@@ -216,7 +216,7 @@ header {
     color: white;
     font-size: 20px;
     border-radius: 10px;
-    width: 90px;
+    width: 25%;
 }
 
 #clear {
@@ -227,7 +227,12 @@ header {
     color: white;
     font-size: 20px;
     border-radius: 10px;
-    width: 90px;
+    width: 25%;
+}
+
+#cart {
+    position : fixed;
+
 }
 
 
