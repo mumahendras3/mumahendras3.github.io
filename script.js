@@ -9,7 +9,6 @@ let productCatalogue = [
     { id: 6, name: "DPMS Lite 16 A3 Remington", category: "Assault Rifle", price: 45000000, image: "./images/DPMS_Lite_16_A3_Remington.png", stock: "12" },
     { id: 7, name: "C5 mine", category: "Bombs", price: 2000000, image: "./images/c5.jpg", stock: "12" },
     { id: 8, name: "Tsar Bomba", category: "Bombs", price: 1, image: "./images/tsar_bomba.jpeg", stock: "12" },
-
 ];
 
 let cart = []; // untuk menampung produk yang udah dibeli
