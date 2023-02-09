@@ -3,7 +3,7 @@
 let productCatalogue = [
     { id: 1, name: "AK-47", category: "assault rifle", price: 35000000, image: "./images/ak-47.jpg", stock: "12" },
     { id: 2, name: "M14", category: "assault rifle", price: 25000000, image: "./images/m14.jpg", stock: "12" },
-    { id: 3, name: "Taurus G3C", category: "pistol", price: 12500000, image: "./images/Taurus_G3c_pistol.png", stock: "12" },
+    { id: 3, name: "Taurus G3C", category: "pistol", price: 12500000, image: "./images/Taurus_G3c_Pistol.png", stock: "12" },
     { id: 4, name: "Charles Daly 1911", category: "pistol", price: 18000000, image: "./images/Charles_Daly_1911_Pistol.png", stock: "12" },
     { id: 5, name: "KS-12", category: "assault rifle", price: 9000000, image: "./images/kalashnikov_KS-12.png", stock: "12" },
     { id: 6, name: "DPMS Lite 16 A3 Remington", category: "assault rifle", price: 45000000, image: "./images/DPMS_Lite_16_A3_Remington.png", stock: "12" },
