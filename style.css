@@ -88,9 +88,22 @@ header {
     list-style: none;
 }
 
+.header-category:hover {
+    background-color: #1b1b1b;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.header-logo:hover {
+    cursor: pointer;
+}
+
+.header-category {
+    padding-bottom: 22px;
+}
+
 .header-list:hover {
     text-decoration: underline;
-    cursor: pointer;
 }
 
 .header-logo {
@@ -238,11 +251,12 @@ header {
 
 #modalTitle {
     font-size: 1.75rem;
+    padding-bottom: 5px;
 }
 
 #modalContent {
     background-color: #fefefe;
-    margin : 300px auto;
+    margin : 12rem auto;
     text-align : center;
     padding : 20px 15px;
     font-size : 20px;
@@ -275,6 +289,10 @@ header {
 
 .right-border {
     border-right: 2px solid black;
+}
+
+.top-border {
+    border-top: 2px solid black;
 }
 
 td, th {

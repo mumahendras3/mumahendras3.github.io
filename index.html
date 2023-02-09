@@ -16,26 +16,25 @@
             <ul class="container-list">
                 
                 <li class="header-list header-logo">
-                    <img src="gunShop.png">
+                    <a href="#product-container-header"><img src="gunShop.png" onclick="showAll()"></a>
                 </li>
-                   
-                <li class="header-list">
-                    <a onclick="showAll()" href="#product-container-header">All</a>
+                <li class="header-list header-category" onclick="filterCategory(`Bombs`)">
+                    <a href="#product-container-header" >Bombs</a>
                 </li>
-                <li class="header-list">
-                    <a onclick="filterCategory(`Pistol`)" href="#product-container-header">Pistol</a>
+                <li class="header-list header-category" onclick="filterCategory(`Pistol`)" href="#product-container-header">
+                    <a href="#product-container-header">Pistol</a>
                 </li>
-                <li class="header-list">
-                    <a onclick="filterCategory(`Assault Rifle`)" href="#product-container-header">Assault Rifle</a>
+                <li class="header-list header-category" onclick="filterCategory(`Assault Rifle`)" href="#product-container-header">
+                    <a href="#product-container-header">Assault Rifle</a>
                 </li>
-                <li class="header-list">
-                    <a onclick="filterCategory(`Shotgun`)" href="#product-container-header">Shotgun</a>
+                <li class="header-list header-category" onclick="filterCategory(`Shotgun`)" href="#product-container-header">
+                    <a href="#product-container-header">Shotgun</a>
                 </li>
                 <li class="header-list">
                     <input id="searchBar" type="text" placeholder="&#x1f50D search weapon..."><span id="searchButton" onclick="searchProduct()">Cari</span>
                 </li>
                 <li id="checkout" onclick="openModal()">
-                    <a href = "#" id = "shopping-cart"><i data-feather="shopping-cart"></i></a><span id="count">0</span>
+                    <a id = "shopping-cart"><i data-feather="shopping-cart"></i></a><span id="count">0</span>
                 </li>
             </ul>
         </div>
@@ -45,7 +44,7 @@
             <h1>GUN<span class="text-dan">&</span><span class="text-bomb">BOMB</span></h1>
         </div>
         <div id="product-container-header">
-            <a href="#product-container-header" id="showAll" class="back-all" onclick="showAll()">Back to all</a>
+            <a id="showAll" class="back-all" onclick="showAll()">Back to all</a>
             <p id="emptyContainer">Barang yang Anda cari tidak ditemukan</p>
         </div>
         <div id="productContainer">
