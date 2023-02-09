@@ -9,6 +9,14 @@ let productCatalogue = [
     { id: 6, name: "DPMS Lite 16 A3 Remington", category: "assault rifle", price: 45000000, image: "./images/DPMS_Lite_16_A3_Remington.png", stock: "12" },
     { id: 7, name: "C5 mine", category: "bomb", price: 2000000, image: "./images/c5.jpg", stock: "12" },
     { id: 8, name: "Tsar Bomba", category: "bomb", price: 1, image: "./images/tsar_bomba.jpeg", stock: "12" },
+    { id: 9, name: "M1014", category: "shotgun", price: 1000000, image: "./images/M1014.png", stock: "12" },
+    { id: 10, name: "M1873", category: "shotgun", price: 1000000, image: "./images/M1873.png", stock: "12" },
+    { id: 11, name: "SPAS12", category: "shotgun", price: 1000000, image: "./images/SPAS12.png", stock: "12" },
+    { id: 12, name: "SPAS15", category: "shotgun", price: 1000000, image: "./images/SPAS15.png", stock: "12" },
+    { id: 13, name: "FlashBang", category: "bomb", price: 1000000, image: "./images/Flashbang.png", stock: "12" },
+    { id: 14, name: "Flashsmoke", category: "bomb", price: 1000000, image: "./images/Smoke.png", stock: "12" },
+    { id: 15, name: "M1911", category: "pistol", price: 1000000, image: "./images/M1911.png", stock: "12" },
+    { id: 16, name: "Revolver", category: "pistol", price: 1000000, image: "./images/Revolver.png", stock: "12" },
 ];
 
 let cart = [];
