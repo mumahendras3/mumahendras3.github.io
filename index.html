@@ -1,1 +1,92 @@
-<!-- Insert your code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul class="container-list">
+                <li class="header-logo"><a href="#top">OLX</li>
+                <li class="header-list">
+                    <a onclick="showAll()">All</a>
+                </li>
+                <li class="header-list">
+                    <a onclick="filterCategory(`pistol`)">Pistol</a>
+                </li>
+                <li class="header-list">
+                    <a onclick="filterCategory(`assault rifle`)">Assault Rifle</a>
+                </li>
+                <li class="header-list">
+                    <a onclick="filterCategory(`shotgun`)">Shotgun</a>
+                </li>
+                <li id="checkout" onclick="">
+                    <a href = "#" id = "shopping-cart"><i data-feather="shopping-cart"></i></a><span id="count">0</span>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="siteProfile">
+            <h1>AGNI<span>.</span>SUPREME</h1>
+        </div>
+        <div>
+            <a id="showAll" onclick="showAll()">Back to all</a>
+        </div>
+        <div id="productContainer"> 
+        </div>
+    </main>
+
+    <!-- modal popup buat checkout -->
+
+    <div id="modal">
+        <div id="modalContent">
+            <p>Keranjang Anda</p>
+            <span id="closeModalIcon">&times;</span>
+            <table id="checkoutTable">
+                <!-- <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr> -->
+                <!-- <tr>
+                    <td class="rowNumber">1</td>
+                    <td class="rowName">AK-47</td>
+                    <td class="rowQuantity">
+                        <span class="addSubstract" onclick="addSubstract(-1,document.getElementsByClassName(`rowNumber`)[0].innerText)">-</span>
+                        <span class="quantity">1</span>
+                        <span class="addSubstract" onclick="addSubstract(1,document.getElementsByClassName(`rowNumber`)[0].innerText)">+</span>
+                    </td>
+                    <td class="rowPrice">35000000</td>
+                    <td class="rowSubtotal">35000000</td>
+                    <td class="rowDelete" onclick="removeItem(document.getElementsByClassName(`rowNumber`)[0].innerText)">x</td>
+                </tr>
+                <tr>
+                    <td class="rowNumber">2</td>
+                    <td class="rowName">M14</td>
+                    <td class="rowQuantity">
+                        <span class="addSubstract" onclick="addSubstract(-1,document.getElementsByClassName(`rowNumber`)[1].innerText)">-</span>
+                        <span class="quantity">1</span>
+                        <span class="addSubstract" onclick="addSubstract(1,document.getElementsByClassName(`rowNumber`)[1].innerText)">+</span>
+                    </td>
+                    <td class="rowPrice">25000000</td>
+                    <td class="rowSubtotal">25000000</td>
+                    <td class="rowDelete" onclick="removeItem(document.getElementsByClassName(`rowNumber`)[1].innerText)">x</td>
+                </tr> -->
+            </table>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+</body>
+</html>
