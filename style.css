@@ -1,3 +1,6 @@
+/* Import some google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
 * {
     margin:0;
     padding:0;
@@ -8,17 +11,23 @@ html {
 }
 
 .tombol-keranjang {
-    
-
     top:30%;
     background-color:#0a0a23;
     color: #fff;
     border:none; 
     border-radius:10px; 
-    padding:10px;
-    min-height:30px; 
-    min-width: 20px;
-    
+    position: absolute;
+    top: 86%;
+    right: 9px;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+}
+
+.tombol-keranjang:hover {
+    cursor: pointer;
+    background-color: #4b4b4b;
+    transition: 0.3s;
 }
 
 .back-all{
@@ -98,9 +107,15 @@ header {
 #checkout {
     float : right;
     display : block;
-    padding : 18px 15px;
     font-size : 20px;
     list-style: none;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    background-color: black;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
 }
 
 #checkout:hover {
@@ -108,6 +123,12 @@ header {
     cursor: pointer;
 }
 
+.feather-shopping-cart {
+    position: absolute;
+    top: 27%;
+    left: 24%;
+    color: white;
+}
 
 #siteProfile {
     height : 100vh;
@@ -151,16 +172,17 @@ header {
 }
 
 #count {
-    margin-left: 7px;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    padding: 10px;
-    background: #fff;
-    color: #000;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    background: red;
+    color: white;
     text-align: center;
-    font: 15px Arial, sans-serif;
+    font: 26px 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: none;
+    position: absolute;
+    top: -10px;
+    right: -10px;
 }
 
 .productContainer {
@@ -177,6 +199,8 @@ header {
     padding: 10px;
     width : 200px;
     background: whitesmoke;
+    position: relative;
+    height: 375px;
 }
 
 .productImage {
@@ -204,11 +228,15 @@ header {
     display : none;
 }
 
+#modalTitle {
+    font-size: 1.75rem;
+}
+
 #modalContent {
     background-color: #fefefe;
     margin : 300px auto;
     text-align : center;
-    padding : 8px 15px;
+    padding : 20px 15px;
     font-size : 20px;
     font-weight : bold;
     width : 50%;
@@ -228,7 +256,21 @@ header {
 }
 
 #checkoutTable {
-    width: 100%;
+    width: 90%;
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+
+.table-header {
+    border-bottom: 2px solid black;
+}
+
+.right-border {
+    border-right: 2px solid black;
+}
+
+td, th {
+    padding: 3px;
 }
 
 .addSubstract {
@@ -236,10 +278,34 @@ header {
     font-size: 30px;
     font-weight: bold;
     display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 1;
+    color: white;
+    border-radius: 10px;
+}
+
+.minus-button {
+    background-color: rgba(174, 23, 23, 0.8);
+}
+
+.minus-button:hover {
+    background: rgba(174, 23, 23, 1);
+}
+
+.plus-button {
+    background-color: rgba(95, 80, 232, 0.8);
+}
+
+.plus-button:hover {
+    background: rgba(95, 80, 232, 1);
 }
 
 .addSubstract:hover {
-    color: blue;
+    cursor: pointer;
+}
+
+.rowDelete:hover {
     cursor: pointer;
 }
 
@@ -277,12 +343,11 @@ header {
 .productName{
     /* background-color: #A9A9A9; */
      /* color: black; */
-     color: black;
-     text-align: left;
+    color: black;
+    text-align: left;
     margin: 10px;
     padding: 5px; 
-    width: 100px; 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: x-large;
 }
 
@@ -297,8 +362,10 @@ header {
 }
 
 #modalMessage {
-    color: blue;
-    font-size: 45px;
+    color: gray;
+    font-size: 65px;
+    font-family: Caveat, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
 }
 
 .productPrice{
@@ -310,7 +377,7 @@ header {
    padding: 5px; 
    width: 80px; 
    font-family: Cambria;
-   font-size: medium;
+   font-size: 20px;
    
 
 }
@@ -324,7 +391,7 @@ header {
    padding: 5px; 
    width: 100px; 
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   font-size: small;
+   font-size: medium;
 
 
 }

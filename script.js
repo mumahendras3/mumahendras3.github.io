@@ -85,7 +85,7 @@ function showCatalogue(products) {
                 <p class="productName">${products[i].name}</p>
                 <p class="productPrice">${cardPrice}</p>
                 <p class="productCategory">${products[i].category}</p>
-                <button type="button" class="btn btn-sm btn-outline-secondary tombol-keranjang" onclick='addtoCart(${products[i].id})'>Tambah ke keranjang</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary tombol-keranjang" onclick='addtoCart(${products[i].id})'>+</button>
             </div>
         </div>`
     }
@@ -134,11 +134,11 @@ function showItems() {
     let checkoutTable = document.getElementById("checkoutTable");
     let sumCheckout = 0;
     checkoutTable.innerHTML = 
-    `<tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>Quantity</th>
-        <th>Price</th>
+    `<tr class="table-header">
+        <th class="right-border">No</th>
+        <th class="right-border">Nama</th>
+        <th class="right-border">Quantity</th>
+        <th class="right-border">Price</th>
         <th>Subtotal</th>
         <th></th>
     </tr>`
@@ -148,25 +148,25 @@ function showItems() {
         sumCheckout += Object.values(productCounts)[i].price * Object.values(productCounts)[i].quantity;
         checkoutTable.innerHTML += 
         `<tr>
-            <td class="rowNumber">${i+1}</td>
-            <td class="rowName">${Object.keys(productCounts)[i]}</td>
-            <td class="rowQuantity">
-                <span class="addSubstract" onclick="addSubstract(-1,document.getElementsByClassName('rowNumber')[${i}].innerText)">-</span>
+            <td class="rowNumber right-border">${i+1}</td>
+            <td class="rowName right-border">${Object.keys(productCounts)[i]}</td>
+            <td class="rowQuantity right-border">
+                <span class="addSubstract minus-button" onclick="addSubstract(-1,document.getElementsByClassName('rowNumber')[${i}].innerText)">-</span>
                 <span class="quantity">${Object.values(productCounts)[i].quantity}</span>
-                <span class="addSubstract" onclick="addSubstract(1,document.getElementsByClassName('rowNumber')[${i}].innerText)">+</span>
+                <span class="addSubstract plus-button" onclick="addSubstract(1,document.getElementsByClassName('rowNumber')[${i}].innerText)">+</span>
             </td>
-            <td class="rowPrice">${productPrice}</td>
+            <td class="rowPrice right-border">${productPrice}</td>
             <td class="rowSubtotal">${productSubtotal}</td>
-            <td class="rowDelete" onclick="removeItem(document.getElementsByClassName('rowName')[${i}].innerText)">x</td>
+            <td class="rowDelete" onclick="removeItem(document.getElementsByClassName('rowName')[${i}].innerText)">&#10060;</td>
         </tr>`
     }
     checkoutTable.innerHTML +=
     `<tr>
         <td class="rowNumber"></td>
         <td class="rowName"></td>
-        <td class="rowQuantity">
+        <td class="rowQuantity right-border">
         </td>
-        <td class="rowPrice">Total</td>
+        <td class="rowPrice right-border">Total</td>
         <td class="rowSubtotal">${formatNumber(sumCheckout)}</td>
         <td class="rowDelete"></td>
     </tr>`
