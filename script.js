@@ -10,13 +10,13 @@ let productCatalogue = [
     { id: 7, name: "C5 mine", category: "Bombs", price: 2000000, image: "./images/c5.jpg", stock: "12" },
     { id: 8, name: "Tsar Bomba", category: "Bombs", price: 1, image: "./images/tsar_bomba.jpeg", stock: "12" },
     { id: 9, name: "M1014", category: "Shotgun", price: 1000000, image: "./images/M1014.png", stock: "12" },
-    { id: 10, name: "M1873", category: "Shotgun", price: 1000000, image: "./images/M1873.png", stock: "12" },
-    { id: 11, name: "SPAS12", category: "Shotgun", price: 1000000, image: "./images/SPAS12.png", stock: "12" },
-    { id: 12, name: "SPAS15", category: "Shotgun", price: 1000000, image: "./images/SPAS15.png", stock: "12" },
-    { id: 13, name: "FlashBang", category: "Bombs", price: 1000000, image: "./images/Flashbang.png", stock: "12" },
-    { id: 14, name: "Flashsmoke", category: "Bombs", price: 1000000, image: "./images/Smoke.png", stock: "12" },
-    { id: 15, name: "M1911", category: "Pistol", price: 1000000, image: "./images/M1911.png", stock: "12" },
-    { id: 16, name: "Revolver", category: "Pistol", price: 1000000, image: "./images/Revolver.png", stock: "12" },
+    { id: 10, name: "M1873", category: "Shotgun", price: 1500000, image: "./images/M1873.png", stock: "12" },
+    { id: 11, name: "SPAS12", category: "Shotgun", price: 1400000, image: "./images/SPAS12.png", stock: "12" },
+    { id: 12, name: "SPAS15", category: "Shotgun", price: 1900000, image: "./images/SPAS15.png", stock: "12" },
+    { id: 13, name: "FlashBang", category: "Bombs", price: 5000000, image: "./images/Flashbang.png", stock: "12" },
+    { id: 14, name: "Flashsmoke", category: "Bombs", price: 500000, image: "./images/Smoke.png", stock: "12" },
+    { id: 15, name: "M1911", category: "Pistol", price: 2000000, image: "./images/M1911.png", stock: "12" },
+    { id: 16, name: "Revolver", category: "Pistol", price: 2500000, image: "./images/Revolver.png", stock: "12" },
 ];
 
 let cart = []; // untuk menampung produk yang udah dibeli
